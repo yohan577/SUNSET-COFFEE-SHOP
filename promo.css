@@ -1,0 +1,193 @@
+/* General & Typography */
+:root {
+    --primary-color: #A0522D; /* Sienna */
+    --secondary-color: #F8F4E6; /* Light Cream */
+    --accent-color: #3C2F2F; /* Dark Coffee */
+    --text-color: #333;
+    --light-text-color: #fefefe;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Promo */
+.promo-header-bogo {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 6rem 0;
+}
+
+.promo-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--light-text-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.promo-subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.cta-button-bogo {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--light-text-color);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button-bogo:hover {
+    background-color: #5d4848;
+}
+
+/* Product Showcase */
+.product-showcase {
+    padding: 4rem 0;
+}
+
+.product-grid-bogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+@media (min-width: 768px) {
+    .product-grid-bogo {
+        flex-direction: row;
+    }
+}
+
+.product-card {
+    flex: 1;
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-details-bogo {
+    flex: 1;
+    padding: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.product-description-bogo {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.features-list li {
+    background-color: #f0e9d6;
+    color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-left: 3px solid var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Order Form Section */
+.order-form-section {
+    background-color: var(--accent-color);
+    color: var(--light-text-color);
+    padding: 4rem 0;
+}
+
+.order-form-section h2 {
+    color: var(--light-text-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.checkout-form-bogo {
+    background-color: var(--primary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.submit-button-bogo {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background-color: var(--light-text-color);
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button-bogo:hover {
+    background-color: #e0d9c4;
+}
+
+/* Footer */
+.promo-footer-bogo {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--accent-color);
+    color: var(--light-text-color);
+    font-size: 0.9rem;
+}

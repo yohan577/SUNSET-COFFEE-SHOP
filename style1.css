@@ -1,0 +1,321 @@
+.order-content {
+    background-color: var(--secondary-color);
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.order-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-family: 'Merriweather', serif;
+    color: var(--primary-color);
+}
+
+.menu-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.category-btn {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--accent-color);
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--light-text);
+}
+
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-grid {
+    display: grid; /* Use CSS Grid for a robust grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Create responsive columns */
+    gap: 2rem; /* Add space between menu items */
+    justify-items: center; /* Center the items within their grid cells */
+    padding: 2rem;
+}
+
+.menu-item {
+    display: flex; /* Use flexbox to align content within each menu item */
+    flex-direction: column; /* Stack the image and text vertically */
+    align-items: center; /* Center the content */
+    text-align: center; /* Center the text */
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.menu-item .item-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item .item-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.item-info {
+    padding: 1rem;
+}
+
+.item-info h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.item-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+}
+
+.item-info .price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.add-btn {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.add-btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* --- Shopping Cart Section Styling --- */
+
+.shopping-cart-section {
+    background-color: var(--light-text);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.shopping-cart-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.cart-items {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.cart-item .item-name {
+    font-weight: 500;
+}
+
+.cart-item .item-price {
+    font-weight: 500;
+    color: var(--accent-color);
+}
+
+.cart-total {
+    text-align: right;
+    padding-top: 1rem;
+}
+
+.cart-total h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.cart-total #cart-total-price {
+    color: var(--accent-color);
+}
+
+.checkout-btn {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    padding: 1rem 2rem; /* Increased padding for a larger, bolder button */
+    border-radius: 8px; /* Softer, more modern rounded corners */
+    cursor: pointer;
+    font-weight: 700; /* Bolder text for more impact */
+    font-size: 1.2rem; /* Larger font size */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 1.5rem; /* Increased margin to separate it from other elements */
+    width: 100%;
+    text-transform: uppercase; /* Use uppercase for a strong, clean look */
+    letter-spacing: 1px; /* Add slight spacing between letters */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to give it depth */
+}
+
+/* Hover and Active states for interactivity */
+.checkout-btn:hover {
+    background-color: #4a301a; /* Darken the background color on hover */
+    transform: translateY(-2px); /* Lift the button slightly for a 3D effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Enlarge the shadow on hover */
+}
+
+.checkout-btn:active {
+    transform: translateY(0); /* Return to original position on click */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.empty-cart-message {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .order-content {
+        padding: 1.5rem 0.5rem;
+    }
+    .order-content h1 {
+        font-size: 2rem;
+    }
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    .shopping-cart-section {
+        padding: 1.5rem;
+    }
+}
+/* --- Delete Button Styling --- */
+/* Styling for the delete button */
+.delete-btn {
+    background: none;
+    border: none;
+    color: red; /* Or any other color you prefer */
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.delete-btn:hover {
+    color: darkred;
+}
+
+/* logo 
+
+/* Styling for the main header */
+.main-header {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 1.2rem 2.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the navigation bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Styling for the logo */
+nav .logo {
+    font-family: 'Merriweather', serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--light-text);
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav .logo:hover {
+    color: var(--accent-color);
+}/* Styling for the list of links */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for each list item */
+nav ul li {
+    margin-left: 2.5rem;
+}
+
+/* Styling for each link */
+nav ul a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Creates a line that appears on hover */
+nav ul a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+nav ul a:hover::after {
+    width: 100%;
+}

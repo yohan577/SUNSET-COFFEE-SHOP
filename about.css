@@ -1,0 +1,159 @@
+/* --- General Styling and Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
+:root {
+    --primary-color: #5C3A21;
+    --secondary-color: #F8F4E6;
+    --accent-color: #A97C50;
+    --text-color: #333;
+    --light-text-color: #fefefe;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary-color);
+}
+
+/* --- Header & Navigation --- */
+.main-headabout {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.main-headabout nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-headabout .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--light-text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-headabout .logo:hover {
+    color: var(--accent-color);
+}
+
+.main-headabout nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.main-headabout nav ul li {
+    margin-left: 2rem;
+}
+
+.main-headabout nav ul li a {
+    color: var(--light-text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-headabout nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* --- About Page Hero Section --- */
+.hero-about {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://primer.com.ph/food/wp-content/uploads/sites/4/2025/03/Cong-Caphe-3-1-800x600.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-about h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Main Content Layout --- */
+.about-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+
+.story-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Mission & Vision Cards --- */
+.mv-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mv-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.mv-card:hover {
+    transform: translateY(-5px);
+}
+
+.mv-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    font-size: 0.9rem;
+}

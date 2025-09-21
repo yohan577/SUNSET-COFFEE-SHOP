@@ -1,0 +1,263 @@
+/* --- General Styling --- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    --primary-color: #3C2F2F;
+    --secondary-color: #F8F5F1;
+    --accent-color: #8C6A5A;
+    --text-color: #333;
+    --light-text: #fff;
+    --shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--secondary-color);
+    transition: background-color 0.5s ease;
+}
+
+/* --- Modal Overlay & Body State --- */
+body.modal-open {
+    overflow: hidden; /* Prevents scrolling when modal is open */
+}
+
+/* New Backdrop for blurring the background */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Darkens the background */
+    backdrop-filter: blur(5px); /* Apply blur to the backdrop */
+    z-index: 99; /* Below the zoomed item, above normal content */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    /* Existing styles from user code */
+}
+
+.hero-title {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20240928/pngtree-serene-morning-coffee-on-a-balcony-overlooking-sunrise-in-the-city-image_16274352.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-title h1 {
+    font-size: 4rem;
+    margin: 0;
+    z-index: 2;
+}
+
+.hero-title p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    z-index: 2;
+}
+
+.order-content {
+    background-color: var(--secondary-color);
+    padding: 3rem 1rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    /* Removed filter here */
+    transition: initial; /* Reset transition for blur filter */
+}
+
+.order-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    font-family: 'Merriweather', serif;
+    color: var(--primary-color);
+}
+
+.menu-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.category-btn {
+    background-color: var(--light-text);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color);
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--light-text);
+}
+
+/* --- Menu Grid & Items --- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.menu-item {
+    background-color: var(--light-text);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.item-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.item-info h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.item-info p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.item-info .price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.add-btn {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.add-btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* --- Zoomed Card (Modal) Styling --- */
+.menu-item.zoomed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.1);
+    width: 90%;
+    max-width: 600px;
+    z-index: 100; /* Higher than the backdrop */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    /* Removed filter: blur(0); as it's no longer needed */
+}
+
+.menu-item.zoomed .close-btn {
+    display: block;
+}
+
+/* Close Button for Zoomed Card */
+.close-btn {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 101; /* Higher than the zoomed item */
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* --- Footer --- */
+footer {
+    /* Existing styles from user code */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}

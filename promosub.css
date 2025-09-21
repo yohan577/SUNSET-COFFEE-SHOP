@@ -1,0 +1,93 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.submitted-container {
+    text-align: center;
+}
+
+.confirmation-box {
+    background-color: #ffffff;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+h1 {
+    color: #4CAF50; /* Green color for success */
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.order-number {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.order-number span {
+    color: #4CAF50;
+}
+
+.return-home-btn {
+    display: inline-block;
+    background-color: #555;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.return-home-btn:hover {
+    background-color: #333;
+}
+
+/* SVG Animation for success icon */
+.success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+}
+
+.success-icon svg {
+    display: block;
+}
+
+.circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+    stroke: #4CAF50;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) .8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}

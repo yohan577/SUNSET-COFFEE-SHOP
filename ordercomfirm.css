@@ -1,0 +1,170 @@
+/* Styling for order summary and payment page */
+.order-summary-content {
+    padding: 2rem;
+}
+
+.summary-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .summary-container {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+
+.order-details,
+.payment-shipping-form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.summary-section,
+.shipping-section,
+.payment-section {
+    margin-bottom: 2rem;
+}
+
+.summary-items {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.summary-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.summary-items li:last-child {
+    border-bottom: none;
+}
+
+.summary-totals p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.summary-totals hr {
+    margin: 1rem 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+.summary-totals h3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.checkout-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.checkout-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.checkout-form input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.place-order-btn {
+    display: block; /* Make the button a block-level element */
+    max-width: 300px; /* Set a maximum width for the button */
+    margin: 0 auto; /* This centers the button horizontally */
+    padding: 1.25rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border-radius: 8px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.place-order-btn:hover {
+    background-color: #4a301a;
+}
+
+/* header 
+/* Modern Header Styling */
+
+.main-header {
+    background-color: #ffffff; /* Use a clean white background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Add a subtle shadow for depth */
+    position: sticky; /* Make the header stick to the top on scroll */
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+}
+
+.main-header nav {
+    display: flex; /* Use flexbox for a modern layout */
+    justify-content: space-between; /* Push logo and links to opposite ends */
+    align-items: center; /* Vertically center items */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700; /* Make the logo bold */
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: var(--accent-color);
+}
+
+.main-header ul {
+    list-style: none;
+    display: flex; /* Arrange navigation links horizontally */
+    gap: 1.5rem; /* Add spacing between links */
+}
+
+.main-header ul li a {
+    text-decoration: none;
+    color: #555; /* A softer color for links */
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 0.25rem;
+}
+
+.main-header ul li a:hover,
+.main-header ul li a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
